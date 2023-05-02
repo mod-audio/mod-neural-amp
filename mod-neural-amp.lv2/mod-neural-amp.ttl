@@ -15,7 +15,7 @@
 
 <https://mod.audio/plugins/mod-neural-amp>
     a lv2:Plugin, lv2:SimulatorPlugin ;
-    doap:name "mod-neural-amp" ;
+    doap:name "MOD Neural Amp" ;
     lv2:optionalFeature lv2:hardRTCapable ;
 
 rdfs:comment """
