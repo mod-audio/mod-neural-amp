@@ -66,14 +66,29 @@ lv2:port
     lv2:name "Model";
     lv2:default 0;
     lv2:minimum 0;
-    lv2:maximum 4;
+    lv2:maximum 19;
     lv2:portProperty lv2:integer;
     lv2:portProperty lv2:enumeration;
-    lv2:scalePoint [rdfs:label "AMP Orange Clean"; rdf:value 0];
-    lv2:scalePoint [rdfs:label "AMP Orange Crunchy1"; rdf:value 1];
-    lv2:scalePoint [rdfs:label "AMP Orange Crunchy2"; rdf:value 2];
-    lv2:scalePoint [rdfs:label "AMP Orange Dirty"; rdf:value 3];
-    lv2:scalePoint [rdfs:label "AMP Orange Nasty"; rdf:value 4];
+    lv2:scalePoint [ rdfs:label "AMP Blues Deluxe Clean1"; rdf:value 0 ],
+                   [ rdfs:label "AMP Blues Deluxe Clean2"; rdf:value 1 ],
+                   [ rdfs:label "AMP Blues Deluxe Clean3"; rdf:value 2 ],
+                   [ rdfs:label "AMP Blues Deluxe Crunchy"; rdf:value 3 ],
+                   [ rdfs:label "AMP Blues Deluxe Dirty"; rdf:value 4 ],
+                   [ rdfs:label "AMP Blues Deluxe Gainy"; rdf:value 5 ],
+                   [ rdfs:label "AMP Marsh JVM Clean1"; rdf:value 6 ],
+                   [ rdfs:label "AMP Marsh JVM Clean2"; rdf:value 7 ],
+                   [ rdfs:label "AMP Marsh JVM Crunch"; rdf:value 8 ],
+                   [ rdfs:label "AMP Marsh JVM OD1"; rdf:value 9 ],
+                   [ rdfs:label "AMP Marsh JVM OD2"; rdf:value 10 ],
+                   [ rdfs:label "AMP Orange Clean"; rdf:value 11 ],
+                   [ rdfs:label "AMP Orange Crunchy1"; rdf:value 12 ],
+                   [ rdfs:label "AMP Orange Crunchy2"; rdf:value 13 ],
+                   [ rdfs:label "AMP Orange Dirty"; rdf:value 14 ],
+                   [ rdfs:label "AMP Orange Nasty"; rdf:value 15 ],
+                   [ rdfs:label "AMP Twin Custom1"; rdf:value 16 ],
+                   [ rdfs:label "AMP Twin Custom2"; rdf:value 17 ],
+                   [ rdfs:label "AMP Twin Vintage1"; rdf:value 18 ],
+                   [ rdfs:label "AMP Twin Vintage2"; rdf:value 19 ];
 ],
 [
     a lv2:ControlPort, lv2:InputPort;

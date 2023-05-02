@@ -15,15 +15,31 @@ static const struct {
     const char* const data;
     const unsigned int size;
 } kModels[] = {
+    { AMP_Blues_Deluxe_Clean1Data, AMP_Blues_Deluxe_Clean1DataSize },
+    { AMP_Blues_Deluxe_Clean2Data, AMP_Blues_Deluxe_Clean2DataSize },
+    { AMP_Blues_Deluxe_Clean3Data, AMP_Blues_Deluxe_Clean3DataSize },
+    { AMP_Blues_Deluxe_CrunchyData, AMP_Blues_Deluxe_CrunchyDataSize },
+    { AMP_Blues_Deluxe_DirtyData, AMP_Blues_Deluxe_DirtyDataSize },
+    { AMP_Blues_Deluxe_GainyData, AMP_Blues_Deluxe_GainyDataSize },
+    { AMP_Marsh_JVM_Clean1Data, AMP_Marsh_JVM_Clean1DataSize },
+    { AMP_Marsh_JVM_Clean2Data, AMP_Marsh_JVM_Clean2DataSize },
+    { AMP_Marsh_JVM_CrunchData, AMP_Marsh_JVM_CrunchDataSize },
+    { AMP_Marsh_JVM_OD1Data, AMP_Marsh_JVM_OD1DataSize },
+    { AMP_Marsh_JVM_OD2Data, AMP_Marsh_JVM_OD2DataSize },
     { AMP_Orange_CleanData, AMP_Orange_CleanDataSize },
     { AMP_Orange_Crunchy1Data, AMP_Orange_Crunchy1DataSize },
     { AMP_Orange_Crunchy2Data, AMP_Orange_Crunchy2DataSize },
     { AMP_Orange_DirtyData, AMP_Orange_DirtyDataSize },
     { AMP_Orange_NastyData, AMP_Orange_NastyDataSize },
+    { AMP_Twin_Custom1Data, AMP_Twin_Custom1DataSize },
+    { AMP_Twin_Custom2Data, AMP_Twin_Custom2DataSize },
+    { AMP_Twin_Vintage1Data, AMP_Twin_Vintage1DataSize },
+    { AMP_Twin_Vintage2Data, AMP_Twin_Vintage2DataSize },
 };
 
 DynamicModel* RtNeuralGeneric::loadModelFromIndex(LV2_Log_Logger* logger, int modelIndex, int* input_size_ptr)
 {
+    static_assert(sizeof(kModels)/sizeof(kModels[0]) == 20, "expected number of models");
     if (modelIndex == 0 || modelIndex > sizeof(kModels)/sizeof(kModels[0]))
         return nullptr;
 
