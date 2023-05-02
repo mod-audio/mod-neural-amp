@@ -6,7 +6,7 @@
  */
 
 #include "rt-neural-generic.h"
-#include "models.hpp"
+#include "models.cpp"
 #include <strstream>
 
 using namespace models;
@@ -137,14 +137,8 @@ DynamicModel* RtNeuralGeneric::loadModelFromIndex(LV2_Log_Logger* logger, int mo
     model->param2Coeff.setTargetValue(0.f);
     model->param2Coeff.clearToTargetValue();
 
-    /* Sanity check on inference engine with loaded model, also serves as pre-buffer
-    * to avoid "clicks" during initialization */
-    if (model_json["input_batch"].is_array() && model_json["input_batch"].is_array()) {
-        std::vector<float> input_batch = model_json["/input_batch"_json_pointer];
-        std::vector<float> output_batch = model_json["/output_batch"_json_pointer];
-        testModel(logger, model.get(), input_batch, output_batch);
-    }
-    else
+    /* pre-buffer to avoid "clicks" during initialization */
+
     {
         float out[2048] = {};
         applyModel(model.get(), out, 2048);

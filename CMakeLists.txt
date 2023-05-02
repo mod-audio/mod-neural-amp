@@ -57,6 +57,10 @@ target_link_libraries(mod-neural-amp
     RTNeural
 )
 
+target_link_options(mod-neural-amp PRIVATE
+  -Wl,--no-undefined
+)
+
 set_target_properties(mod-neural-amp
     PROPERTIES
         PREFIX ""
