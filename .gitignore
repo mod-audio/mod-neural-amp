@@ -1,8 +1,9 @@
 *.cmake
 *.so
-*.txt
 CMakeFiles/
 RTNeural/
+CMakeCache.txt
+install_manifest.txt
 Makefile
 models.cpp
 models.hpp
