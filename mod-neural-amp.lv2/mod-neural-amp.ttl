@@ -40,12 +40,9 @@ mod:label "Neural Amp";
 
 doap:license <http://opensource.org/licenses/isc> ;
 lv2:project <http://lv2plug.in/ns/lv2>;
-lv2:requiredFeature urid:map ,
-    work:schedule ,
-    <http://moddevices.com/ns/ext/license#feature> ;
+lv2:requiredFeature urid:map , work:schedule ;
 lv2:optionalFeature lv2:hardRTCapable ;
-lv2:extensionData work:interface ,
-    <http://moddevices.com/ns/ext/license#interface> ;
+lv2:extensionData work:interface ;
 lv2:port
 [
     a lv2:AudioPort, lv2:InputPort;
