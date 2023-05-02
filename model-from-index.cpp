@@ -128,6 +128,7 @@ DynamicModel* RtNeuralGeneric::loadModelFromIndex(LV2_Log_Logger* logger, int mo
     model->input_gain = input_gain;
     model->output_gain = output_gain;
     model->samplerate = model_samplerate;
+#if AIDADSP_CONDITIONED_MODELS
     model->param1Coeff.setSampleRate(model_samplerate);
     model->param1Coeff.setTimeConstant(0.1f);
     model->param1Coeff.setTargetValue(0.f);
@@ -136,6 +137,7 @@ DynamicModel* RtNeuralGeneric::loadModelFromIndex(LV2_Log_Logger* logger, int mo
     model->param2Coeff.setTimeConstant(0.1f);
     model->param2Coeff.setTargetValue(0.f);
     model->param2Coeff.clearToTargetValue();
+#endif
 
     /* pre-buffer to avoid "clicks" during initialization */
 

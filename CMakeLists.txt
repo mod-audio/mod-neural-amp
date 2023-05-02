@@ -40,6 +40,7 @@ add_library(mod-neural-amp SHARED
 
 target_compile_definitions(mod-neural-amp PRIVATE
     AIDADSP_COMMERCIAL=0
+    AIDADSP_CONDITIONED_MODELS=0
     AIDADSP_MODEL_LOADER=0
     PLUGIN_URI="https://mod.audio/plugins/mod-neural-amp"
 )
