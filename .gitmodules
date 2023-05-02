@@ -1,0 +1,3 @@
+[submodule "aidadsp-lv2"]
+	path = aidadsp-lv2
+	url = git@github.com:AidaDSP/aidadsp-lv2.git

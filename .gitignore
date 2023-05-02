@@ -1,0 +1,8 @@
+*.cmake
+*.so
+*.txt
+CMakeFiles/
+RTNeural/
+Makefile
+models.cpp
+models.hpp
