@@ -76,6 +76,5 @@ install(FILES
 )
 
 install(TARGETS mod-neural-amp
-    LIBRARY
     DESTINATION ${LV2_INSTALL_DIR}
 )
